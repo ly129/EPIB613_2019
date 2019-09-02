@@ -4,3 +4,4 @@
 yi.lian@mail.mcgill.ca
 
 ## Course Syllabus
+[Syllabus](EPIB613_Syllabus_2019.pdf)
