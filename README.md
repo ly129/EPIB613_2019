@@ -1,5 +1,6 @@
 # EPIB 613 - Introduction to Statistical Software
-McGill University Fall 2019
+## Department of Epidemiology, Biostatistics and Occupational Health, McGill University
+Fall 2019
 ## Yi Lian
 yi.lian@mail.mcgill.ca
 
