@@ -6,3 +6,5 @@ yi.lian@mail.mcgill.ca
 Fall 2019
 ## Course Syllabus
 - [Syllabus](EPIB613_Syllabus_2019.pdf)
+## Lectures
+- [Lecture 0: Intro](Lecture0_Intro.pdf)
