@@ -7,4 +7,4 @@ Fall 2019
 ## Course Syllabus
 - [Syllabus](EPIB613_Syllabus_2019.pdf)
 ## Lectures
-- [Lecture 0: Intro](Lecture0_Intro.pdf)
+- [Lecture 0: Course intro](Lecture0_Intro.pdf)
