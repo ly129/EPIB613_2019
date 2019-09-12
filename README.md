@@ -9,3 +9,5 @@ Fall 2019
 ## Lectures
 - [Lecture 0: Course intro](Lecture0_Intro.pdf)
 - [Lecture 1](Lecture1.pdf)
+- Lecture 2
+  - [PDF](Lecture2.pdf), [HTML](Lecture2.ipynb), [Code](Lecture2.r)
