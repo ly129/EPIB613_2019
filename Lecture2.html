@@ -14536,6 +14536,13 @@ drug  0  1
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Create-these-data-structures">Create these data structures<a class="anchor-link" href="#Create-these-data-structures">&#182;</a></h4>
+<pre><code>    - c
+    - matrix
+    - array
+    - data.frame
+    - ...
+</code></pre>
 <h4 id="Conversion-between-these-data-structures">Conversion between these data structures<a class="anchor-link" href="#Conversion-between-these-data-structures">&#182;</a></h4>
 <pre><code>    - as.vector
     - as.matrix
@@ -14854,7 +14861,7 @@ Levels: a b c
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="m">-1</span><span class="o">:</span><span class="m">10</span> <span class="c1"># By increments of 1.</span>
+<div class=" highlight hl-r"><pre><span></span><span class="m">-1</span><span class="o">:</span><span class="m">10</span> <span class="c1"># Integers, by increments of 1.</span>
 </pre></div>
 
     </div>
@@ -15184,7 +15191,18 @@ Levels: a b c
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="Open-question:-can-you-think-of-any-real-life-use-of-this-function?">Open question: can you think of any real-life use of this function?<a class="anchor-link" href="#Open-question:-can-you-think-of-any-real-life-use-of-this-function?">&#182;</a></h6>
+<h5 id="Now-we-can-group-these-vectors-into-higher-dimensional-data-structures-we-just-learned.">Now we can group these vectors into higher dimensional data structures we just learned.<a class="anchor-link" href="#Now-we-can-group-these-vectors-into-higher-dimensional-data-structures-we-just-learned.">&#182;</a></h5><h5 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h5><ol>
+<li>Make a character variable of 5 student names - a, b, c, d, e</li>
+<li>Make a numeric variable of their EPIB 607 scores - 80, 99, 55, 70, 84</li>
+<li>Make a numeric variable of their EPIB 613 scores - 85, 90, 62, 60, 88</li>
+<li>Make a factor variable with two levels - 'EPIB607' and 'EPIB613'</li>
+<li>Make two numeric variable of their curved scores - $\sqrt{score}\times 10$</li>
+<li>Make a logical variable of their pass/fail situation before curving</li>
+<li>Make a logical variable of their pass/fail situation after curving</li>
+<li>Put the four numeric vectors into a matrix, each row is a student</li>
+<li>Assemble all information into a data frame, each row is a student, with columns indicating the course, score before curving, score after curving, pass/fail. Each student will have two rows.</li>
+</ol>
+
 </div>
 </div>
 </div>
