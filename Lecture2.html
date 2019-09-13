@@ -13498,7 +13498,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">peak.no</span> <span class="o">&lt;-</span> <span class="n">no.students</span> <span class="o">&lt;-</span> <span class="m">21</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">peak.no</span> <span class="o">&lt;-</span> <span class="n">no.students</span> <span class="o">&lt;-</span> <span class="m">21</span> <span class="c1"># Just an example of chained &lt;-</span>
 <span class="n">no.quit</span> <span class="o">&lt;-</span> <span class="m">3</span>
 <span class="n">no.stay</span> <span class="o">&lt;-</span> <span class="n">peak.no</span> <span class="o">-</span> <span class="n">no.quit</span>
 <span class="n">no.stay</span>
@@ -14504,6 +14504,44 @@ drug  0  1
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>67</li>
+	<li>56</li>
+	<li>87</li>
+	<li>91</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="c1"># checking the structure of an object</span>
 </pre></div>
 
@@ -14586,7 +14624,7 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">mylist</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="s">&quot;Red&quot;</span><span class="p">,</span> <span class="nf">factor</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">)),</span> <span class="nf">c</span><span class="p">(</span><span class="m">21</span><span class="p">,</span><span class="m">32</span><span class="p">,</span><span class="m">11</span><span class="p">),</span> <span class="kc">TRUE</span><span class="p">)</span>
@@ -14630,7 +14668,7 @@ Levels: a b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
@@ -14675,7 +14713,7 @@ Levels: a b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">ch.letter</span> <span class="o">&lt;-</span> <span class="kc">letters</span><span class="n">[1</span><span class="o">:</span><span class="m">3</span><span class="n">]</span>
@@ -14707,7 +14745,7 @@ Levels: a b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">class</span><span class="p">(</span><span class="n">ch.letter</span><span class="p">)</span>
@@ -14739,7 +14777,7 @@ Levels: a b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">fac.letter</span> <span class="o">&lt;-</span> <span class="nf">as.factor</span><span class="p">(</span><span class="kc">letters</span><span class="n">[1</span><span class="o">:</span><span class="m">3</span><span class="n">]</span><span class="p">)</span>
@@ -14773,7 +14811,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">class</span><span class="p">(</span><span class="n">fac.letter</span><span class="p">)</span>
@@ -14804,6 +14842,67 @@ Levels: a b c
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">factor</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+	<li>7</li>
+	<li>8</li>
+	<li>9</li>
+	<li>10</li>
+</ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<ol class=list-inline>
+		<li>'1'</li>
+		<li>'2'</li>
+		<li>'3'</li>
+		<li>'4'</li>
+		<li>'5'</li>
+		<li>'6'</li>
+		<li>'7'</li>
+		<li>'8'</li>
+		<li>'9'</li>
+		<li>'10'</li>
+	</ol>
+</details>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14820,7 +14919,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span> <span class="m">5.44</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">34123</span><span class="p">)</span>
@@ -14858,7 +14957,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="m">-1</span><span class="o">:</span><span class="m">10</span> <span class="c1"># Integers, by increments of 1.</span>
@@ -14904,7 +15003,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">seq</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">0.33</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">9.33</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
@@ -14942,7 +15041,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">seq</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
@@ -14981,7 +15080,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">rep</span><span class="p">(</span><span class="m">1.2</span><span class="p">,</span> <span class="n">times</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
@@ -15020,7 +15119,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">rep</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;six&quot;</span><span class="p">,</span> <span class="s">&quot;one&quot;</span><span class="p">,</span> <span class="s">&quot;three&quot;</span><span class="p">),</span> <span class="n">times</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
@@ -15060,7 +15159,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="nf">rep</span><span class="p">(</span><span class="nf">seq</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">),</span> <span class="n">times</span> <span class="o">=</span> <span class="m">2</span><span class="p">))</span>
@@ -15107,7 +15206,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">sequence</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
@@ -15146,7 +15245,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">sequence</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
@@ -15206,6 +15305,688 @@ Levels: a b c
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">names</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">,</span> <span class="s">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">names</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'a'</li>
+	<li>'b'</li>
+	<li>'c'</li>
+	<li>'d'</li>
+	<li>'e'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">epib607_score</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">80</span><span class="p">,</span> <span class="m">99</span><span class="p">,</span> <span class="m">55</span><span class="p">,</span> <span class="m">70</span><span class="p">,</span> <span class="m">84</span><span class="p">)</span>
+<span class="n">epib607_score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>80</li>
+	<li>99</li>
+	<li>55</li>
+	<li>70</li>
+	<li>84</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">epib613_score</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">85</span><span class="p">,</span> <span class="m">90</span><span class="p">,</span> <span class="m">62</span><span class="p">,</span> <span class="m">60</span><span class="p">,</span> <span class="m">88</span><span class="p">)</span>
+<span class="n">epib613_score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>85</li>
+	<li>90</li>
+	<li>62</li>
+	<li>60</li>
+	<li>88</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">course</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;EPIB607&quot;</span><span class="p">,</span> <span class="s">&quot;EPIB613&quot;</span><span class="p">))</span>
+<span class="n">course</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>EPIB607</li>
+	<li>EPIB613</li>
+</ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<ol class=list-inline>
+		<li>'EPIB607'</li>
+		<li>'EPIB613'</li>
+	</ol>
+</details>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">curved607</span> <span class="o">&lt;-</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">epib607_score</span><span class="p">)</span><span class="o">*</span><span class="m">10</span>
+<span class="n">curved613</span> <span class="o">&lt;-</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">epib613_score</span><span class="p">)</span><span class="o">*</span><span class="m">10</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">score_mat</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">epib607_score</span><span class="p">,</span> <span class="n">epib613_score</span><span class="p">,</span> <span class="n">curved607</span><span class="p">,</span> <span class="n">curved613</span><span class="p">),</span> <span class="n">nrow</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">score_mat</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A matrix: 5 × 4 of type dbl</caption>
+<tbody>
+	<tr><td>80</td><td>85</td><td>89.44272</td><td>92.19544</td></tr>
+	<tr><td>99</td><td>90</td><td>99.49874</td><td>94.86833</td></tr>
+	<tr><td>55</td><td>62</td><td>74.16198</td><td>78.74008</td></tr>
+	<tr><td>70</td><td>60</td><td>83.66600</td><td>77.45967</td></tr>
+	<tr><td>84</td><td>88</td><td>91.65151</td><td>93.80832</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">cbind</span><span class="p">(</span><span class="n">epib607_score</span><span class="p">,</span> <span class="n">epib613_score</span><span class="p">,</span> <span class="n">curved607</span><span class="p">,</span> <span class="n">curved613</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A matrix: 5 × 4 of type dbl</caption>
+<thead>
+	<tr><th scope=col>epib607_score</th><th scope=col>epib613_score</th><th scope=col>curved607</th><th scope=col>curved613</th></tr>
+</thead>
+<tbody>
+	<tr><td>80</td><td>85</td><td>89.44272</td><td>92.19544</td></tr>
+	<tr><td>99</td><td>90</td><td>99.49874</td><td>94.86833</td></tr>
+	<tr><td>55</td><td>62</td><td>74.16198</td><td>78.74008</td></tr>
+	<tr><td>70</td><td>60</td><td>83.66600</td><td>77.45967</td></tr>
+	<tr><td>84</td><td>88</td><td>91.65151</td><td>93.80832</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">pass607</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">,</span> <span class="bp">T</span><span class="p">)</span>
+<span class="n">pass613</span> <span class="o">&lt;-</span> <span class="nf">rep</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">pass607</span>
+<span class="n">pass613</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df.names</span> <span class="o">&lt;-</span> <span class="nf">rep</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">df.names</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'a'</li>
+	<li>'b'</li>
+	<li>'c'</li>
+	<li>'d'</li>
+	<li>'e'</li>
+	<li>'a'</li>
+	<li>'b'</li>
+	<li>'c'</li>
+	<li>'d'</li>
+	<li>'e'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df.score</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">epib607_score</span><span class="p">,</span> <span class="n">epib613_score</span><span class="p">)</span>
+<span class="n">df.score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>80</li>
+	<li>99</li>
+	<li>55</li>
+	<li>70</li>
+	<li>84</li>
+	<li>85</li>
+	<li>90</li>
+	<li>62</li>
+	<li>60</li>
+	<li>88</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df.pass</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">pass607</span><span class="p">,</span> <span class="n">pass613</span><span class="p">)</span>
+<span class="n">df.pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df.course</span> <span class="o">&lt;-</span> <span class="nf">rep</span><span class="p">(</span><span class="n">course</span><span class="p">,</span> <span class="n">each</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
+<span class="n">df.course</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+</ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<ol class=list-inline>
+		<li>'EPIB607'</li>
+		<li>'EPIB613'</li>
+	</ol>
+</details>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Alternative way to do factor</span>
+<span class="n">course.ch</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;EPIB607&quot;</span><span class="p">,</span> <span class="m">5</span><span class="p">),</span> <span class="nf">rep</span><span class="p">(</span><span class="s">&quot;EPIB613&quot;</span><span class="p">,</span> <span class="m">5</span><span class="p">))</span>
+<span class="n">course.ch</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'EPIB607'</li>
+	<li>'EPIB607'</li>
+	<li>'EPIB607'</li>
+	<li>'EPIB607'</li>
+	<li>'EPIB607'</li>
+	<li>'EPIB613'</li>
+	<li>'EPIB613'</li>
+	<li>'EPIB613'</li>
+	<li>'EPIB613'</li>
+	<li>'EPIB613'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">course.fac</span> <span class="o">&lt;-</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">course.ch</span><span class="p">)</span>
+<span class="n">course.fac</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB607</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+	<li>EPIB613</li>
+</ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<ol class=list-inline>
+		<li>'EPIB607'</li>
+		<li>'EPIB613'</li>
+	</ol>
+</details>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">score.data</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">df.names</span><span class="p">,</span> <span class="n">df.score</span><span class="p">,</span> <span class="n">df.course</span><span class="p">,</span> <span class="n">df.pass</span><span class="p">)</span>
+<span class="n">score.data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 10 × 4</caption>
+<thead>
+	<tr><th scope=col>df.names</th><th scope=col>df.score</th><th scope=col>df.course</th><th scope=col>df.pass</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>a</td><td>80</td><td>EPIB607</td><td> TRUE</td></tr>
+	<tr><td>b</td><td>99</td><td>EPIB607</td><td> TRUE</td></tr>
+	<tr><td>c</td><td>55</td><td>EPIB607</td><td>FALSE</td></tr>
+	<tr><td>d</td><td>70</td><td>EPIB607</td><td> TRUE</td></tr>
+	<tr><td>e</td><td>84</td><td>EPIB607</td><td> TRUE</td></tr>
+	<tr><td>a</td><td>85</td><td>EPIB613</td><td> TRUE</td></tr>
+	<tr><td>b</td><td>90</td><td>EPIB613</td><td> TRUE</td></tr>
+	<tr><td>c</td><td>62</td><td>EPIB613</td><td> TRUE</td></tr>
+	<tr><td>d</td><td>60</td><td>EPIB613</td><td> TRUE</td></tr>
+	<tr><td>e</td><td>88</td><td>EPIB613</td><td> TRUE</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15215,7 +15996,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span>
@@ -15229,7 +16010,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span><span class="m">+1</span> <span class="c1"># here 1 is considered as a vector (1, 1, 1)</span>
@@ -15266,7 +16047,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
@@ -15303,7 +16084,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
@@ -15340,7 +16121,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a^2</span>
@@ -15392,7 +16173,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">),</span> <span class="n">nrow</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
@@ -15430,7 +16211,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c</span><span class="m">+1</span>
@@ -15469,7 +16250,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c</span><span class="o">+</span><span class="n">d</span>
@@ -15508,7 +16289,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c</span><span class="o">*</span><span class="n">d</span>
@@ -15547,7 +16328,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c^2</span>
@@ -15602,7 +16383,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">%*%</span> <span class="n">b</span>
@@ -15640,7 +16421,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">%o%</span> <span class="n">b</span>
@@ -15680,7 +16461,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c</span> <span class="o">%*%</span> <span class="n">d</span>
@@ -15719,7 +16500,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">c</span><span class="p">;</span> <span class="nf">t</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
@@ -15777,7 +16558,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">diag</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
@@ -15813,7 +16594,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">det</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
@@ -15852,7 +16633,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Recall vector a and b from above.</span>
@@ -15885,7 +16666,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="c1"># Equal or not?</span>
@@ -15922,7 +16703,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span> <span class="c1"># Not equal?</span>
@@ -15959,7 +16740,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
@@ -15996,7 +16777,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span>
@@ -16033,7 +16814,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># And</span>
@@ -16106,7 +16887,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Or</span>
@@ -16144,7 +16925,7 @@ Levels: a b c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="s">&quot;ABC&quot;</span> <span class="o">==</span> <span class="s">&quot;ABC&quot;</span>
@@ -16176,7 +16957,7 @@ TRUE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="s">&quot;ABC&quot;</span> <span class="o">==</span> <span class="s">&quot;abc&quot;</span>
@@ -16208,7 +16989,7 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kc">TRUE</span> <span class="o">+</span> <span class="kc">TRUE</span> <span class="o">+</span> <span class="kc">FALSE</span> <span class="c1"># True = 1, False = 0.</span>
