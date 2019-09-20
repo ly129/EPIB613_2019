@@ -23,14 +23,33 @@ vector[index]
 # Use the index system to re-order
 vector[c(5,4,3,2,1)]
 
+vector
+
+# delete the 2nd and 4th
+vector[-c(2,4)]
+
+# change the value of the 3rd
+vector[3] <- 123
+vector
+
 # Recall that we could give names to vector entries
+vector <- 2:6
 names(vector) <- letters[2:6]; vector
 
 vector["b"]
 
+vector[c("b", "f")]
+
 matrix <- matrix(c(3:14), nrow = 4, byrow = TRUE)
 print(matrix)
 # Note that the indices are given.
+
+matrix_byrow <- matrix(c(3:14), nrow = 4, byrow = TRUE)
+matrix_bycol <- matrix(c(3:14), nrow = 4, byrow = FALSE)
+
+matrix_byrow
+matrix_bycol
+?matrix
 
 matrix[2, 3]
 
@@ -40,6 +59,10 @@ matrix[ , c(1, 3)]
 
 # Change the order of columns. 
 matrix[ , c(3, 1)]
+
+matrix[1:4, c(1,3)]
+
+matrix[ , -2]
 
 rownames(matrix)
 
@@ -86,6 +109,10 @@ vector[vector>4]
 
 vector>4
 
+numbers <- 1:5
+odd <- c(T, F, T, F ,T)
+numbers[odd]
+
 # What is John's score?
 df[df$names == "John",]
 
@@ -119,6 +146,14 @@ print(list)
 list[[1]]
 
 list[[3]][2]
+
+named.list <- list(name = "Yi",
+                   course = "EPIB 613",
+                   age = 28,
+                   married = T)
+named.list
+
+named.list$name
 
 head(mtcars) # You can use this dataset directly whenever you want.
 
@@ -165,6 +200,9 @@ tail(mtcars, n = 3)
 
 # Quick summary of the data frame
 summary(mtcars)
+
+head(ToothGrowth)
+summary(ToothGrowth)
 
 # Check missing values
 sum(is.na(mtcars))
