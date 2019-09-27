@@ -1,10 +1,15 @@
 
 df <- data.frame(names = c("Lucy", "John", "Mark", "Candy"),
-                score = c(67, 56, 87, 91))
+                 score = c(67, 56, 87, 91))
+df
+
+for (i in 1:4) {
+    df$curved[i] <- sqrt(df$score[i])*10
+}
 df
 
 x <- NULL
-for (i in 1:5){
+for (i in 1:5) {
     x[i] = 2*i
 }
 x
@@ -16,7 +21,7 @@ x
 i <- 0
 y <- 9
 x <- 2
-while (y>=x){
+while (y>=x) {
     y <- y - x
     i <- i + 1
 }
@@ -24,8 +29,8 @@ y   # modulus
 i   # integer division
 # why?
 
-watermelon <- FALSE
-no.orange <- if (watermelon == TRUE){
+watermelon <- T
+no.orange <- if (watermelon == TRUE) {
     "Buy 1 orange"
 } else {
     print("Buy 6 oranges")   # As seen in class, print() is useless here.
@@ -41,14 +46,27 @@ df$pass <- ifelse(test = df$score >= 65, yes = TRUE, no = FALSE)
 df
 
 i <- 0
-# repeat {system("say Because they have watermelons!")
-#         i <- i + 1
-#     if (i>=3){
-#         break
-#     }
-# }
+repeat {print("Because they have watermelons!")
+        i <- i + 1
+    if (i>=3){
+        break
+    }
+}
 
+i <- 0
+y <- 9
+x <- 2
 
+repeat {
+    # The operation
+    y <- y - x
+    i <- i + 1
+    # Stop criteria
+    if (y<x) {
+        break
+    }
+}
+i; y
 
 # Using indices from last lecture to change specific entries in R objects
 df.copy <- df
@@ -65,9 +83,14 @@ complete.cases(df.copy)
 
 !complete.cases(df.copy)
 
+s <- 1:5
+s[c(TRUE, FALSE, TRUE, FALSE, FALSE)]
+
 # Inomplete data points
-df.copy[!complete.cases(df.copy), ]
+df.copy[complete.cases(df.copy), ]
 # Recall the logical operator "!"
+
+!FALSE
 
 # Taking the average score
 mean(df.copy$score)
@@ -78,6 +101,9 @@ sum(df.copy$score)
 sum(df.copy$score, na.rm = T)
 
 na.omit(df.copy)
+
+# Options in R that deals with missingness
+?na.action
 
 Sys.Date()
 # Note the standard date format in R
@@ -122,24 +148,29 @@ trunc(3.14159)
 
 signif(3.14159, 3)
 
-# ?round
+round(pi, digits = 10)
 
+trunc(9/2)
 
+df
 
 for (i in 1:4){
     df$student.no[i] <- paste("student", i)
-    df$curved.score[i] <- round(sqrt(df$score[i]) * 10)
+#     df$curved.score[i] <- round(sqrt(df$score[i]) * 10)
 }
+
+df
+
 str(df)
 
 n <- nrow(df)
-plot(as.factor(df$student.no), df$curved.score,
+plot(as.factor(df$student.no), df$curved,
      # Math symbols in text
      main = expression(paste("Score is ", alpha, ", curved score is ", sqrt(alpha)%*%10)),
      # Variable value in text
      xlab = paste("There are", n, "students"))
 
-df.scores <- df[, c("score", "curved.score")]; df.scores
+df.scores <- df[, c("score", "curved")]; df.scores
 
 apply(df.scores, MARGIN = 2, FUN = mean)
 
@@ -148,6 +179,8 @@ apply(df.scores, MARGIN = 1, FUN = diff)   # diff() calculates the difference - 
 myarray <- array(1:12, dim = c(2,3,2)); print(myarray)
 
 apply(myarray, MARGIN = c(2, 3), sum)
+
+df
 
 sapply(df, is.numeric)
 
@@ -172,27 +205,29 @@ which.max(age)   #returns the index of the greatest element of x
 which.min(age)   #returns the index of the smallest element of x
 
 seq(from = 0, to = 1, by = 0.25)
-quantile(age, probs = seq(from = 0, to = 1, by = 0.25))
+quantile(1:100, probs = seq(from = 0, to = 1, by = 0.25))
 # Returns the specified quantiles.
 
+age
 unique(age)   # Gives the vector of distinct values
 
 diff(age)   # Replaces a vector by the vector of first differences
 
-sort(age)   # Sorts elements into order
+sort(age, decreasing = F)   # Sorts elements into order
 
 order(age)
 age[order(age)]   # x[order(x)] orders elements of x
 
-cumsum(age)   # Cumulative sums
+age
+cumsum(age)    # Cumulative sums
 cumprod(age)   # Cumulative products
 
-age
-cat <- cut(age, breaks = 2); cat   # Divide continuous variable in factor with n levels
-table(cat)   # Cross tabulation and table creation
+cat <- cut(age, breaks = c(-Inf, 2.5, 5.5, Inf))  # Divide continuous variable in factor with n levels
+cbind(age, cat)
+table(cat)
 
 # Split the variable into categories
-age.cat <- split(age, cut(age,2))
+age.cat <- split(age, cat)
 age.cat
 
 # split() gives a list
@@ -203,7 +238,7 @@ lapply(age.cat, mean)
 
 # The structure
 
-func_name <- function(argument){
+func_name <- function(argument) {
     statement
 }
 
@@ -231,10 +266,13 @@ modulus1 <- function(y, x){
     return(list(modulus=mod, integer.division=int.div))
 }
 out1 <- modulus1(y = 9, x = 2)
-print(out1)
+# print(out1)
+out1
 str(out1)
 
 out1$modulus
+# out1$integer.division
+
 out1$integer.division
 
 # Option 2 - use trunc() or floor()
@@ -250,6 +288,8 @@ str(out2)
 
 out2[1]
 out2[2]
+
+out2["modulus"]
 
 attr(out2, "names")
 
@@ -268,5 +308,9 @@ modulus3 <- function(y, x){
 out3 <- modulus3(9, 2)
 
 # Note that without printing out3, the result is already shown.
+
+9%%2
+
+9%/%2
 
 
