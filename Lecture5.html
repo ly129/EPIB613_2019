@@ -13130,7 +13130,7 @@ div#notebook {
 <h5 id="Using">Using<a class="anchor-link" href="#Using">&#182;</a></h5><ul>
 <li>$ and [ , ]</li>
 <li>subset( ) Very powerful!</li>
-<li>dplyr package</li>
+<li><tt>dplyr</tt> package and the entire <tt>tidyverse</tt></li>
 </ul>
 <h5 id="Pick-your-favorite---one-is-enough.">Pick your favorite - one is enough.<a class="anchor-link" href="#Pick-your-favorite---one-is-enough.">&#182;</a></h5>
 </div>
@@ -13667,6 +13667,44 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df</span><span class="o">$</span><span class="n">pass</span> <span class="o">==</span> <span class="kc">TRUE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Select rows that passed</span>
 <span class="n">df[df</span><span class="o">$</span><span class="n">pass</span> <span class="o">==</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">]</span>
 </pre></div>
@@ -13709,7 +13747,49 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df[df</span><span class="o">$</span><span class="n">names</span> <span class="o">==</span> <span class="s">&quot;Lucy&quot;</span><span class="p">,</span> <span class="n">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 1 × 4</caption>
+<thead>
+	<tr><th scope=col>names</th><th scope=col>score</th><th scope=col>student.no</th><th scope=col>pass</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Lucy</td><td>67</td><td>student 1</td><td>TRUE</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Delete variable</span>
@@ -13755,7 +13835,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># I believe that this used to work, but not anymore.</span>
@@ -13805,7 +13885,64 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="o">!</span><span class="nf">names</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">%in%</span> <span class="n">drop</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'names'</li>
+	<li>'score'</li>
+	<li>'student.no'</li>
+	<li>'pass'</li>
+</ol>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>FALSE</li>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">select</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;student.no&quot;</span><span class="p">,</span> <span class="s">&quot;pass&quot;</span><span class="p">)</span>
@@ -13851,7 +13988,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># How does this work?</span>
@@ -13929,13 +14066,203 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">df[df</span><span class="o">$</span><span class="n">pass</span> <span class="o">==</span> <span class="kc">TRUE</span> <span class="o">&amp;</span> <span class="n">df</span><span class="o">$</span><span class="n">name</span> <span class="o">!=</span> <span class="s">&quot;Lucy&quot;</span> <span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;names&quot;</span><span class="p">,</span> <span class="s">&quot;score&quot;</span><span class="p">)</span><span class="n">]</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 2 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>names</th><th scope=col>score</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>3</th><td>Mark </td><td>87</td></tr>
+	<tr><th scope=row>4</th><td>Candy</td><td>91</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">passed</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="o">$</span><span class="n">pass</span> <span class="o">==</span> <span class="kc">TRUE</span>
+<span class="n">passed</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">notLucy</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="o">$</span><span class="n">name</span> <span class="o">!=</span> <span class="s">&quot;Lucy&quot;</span>
+<span class="n">notLucy</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">rowCondition</span> <span class="o">&lt;-</span> <span class="n">passed</span> <span class="o">&amp;</span> <span class="n">notLucy</span>
+<span class="n">rowCondition</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>FALSE</li>
+	<li>FALSE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df[rowCondition</span><span class="p">,</span> <span class="n">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 2 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>names</th><th scope=col>score</th><th scope=col>student.no</th><th scope=col>pass</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>3</th><td>Mark </td><td>87</td><td>student 3</td><td>TRUE</td></tr>
+	<tr><th scope=row>4</th><td>Candy</td><td>91</td><td>student 4</td><td>TRUE</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13951,7 +14278,52 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 4 × 4</caption>
+<thead>
+	<tr><th scope=col>names</th><th scope=col>score</th><th scope=col>student.no</th><th scope=col>pass</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Lucy </td><td>67</td><td>student 1</td><td> TRUE</td></tr>
+	<tr><td>John </td><td>56</td><td>student 2</td><td>FALSE</td></tr>
+	<tr><td>Mark </td><td>87</td><td>student 3</td><td> TRUE</td></tr>
+	<tr><td>Candy</td><td>91</td><td>student 4</td><td> TRUE</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># &quot;select&quot; argument selects columns</span>
@@ -13997,7 +14369,7 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Can also delete unwanted columns</span>
@@ -14043,7 +14415,7 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># &quot;subset&quot; argument selects rows</span>
@@ -14088,7 +14460,7 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Now use both select and subset arguments to apply conditions</span>
@@ -14141,14 +14513,45 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Show the name and score of those who passed except Lucy(s).</span>
 <span class="c1"># Recall logical operators &amp;, | and !</span>
+<span class="nf">subset</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">select</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">score</span><span class="p">),</span> <span class="n">subset</span> <span class="o">=</span> <span class="n">pass</span> <span class="o">==</span> <span class="kc">TRUE</span> <span class="o">&amp;</span> <span class="n">names</span> <span class="o">!=</span> <span class="s">&quot;Lucy&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 2 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>names</th><th scope=col>score</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>3</th><td>Mark </td><td>87</td></tr>
+	<tr><th scope=row>4</th><td>Candy</td><td>91</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14167,7 +14570,7 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
@@ -14208,7 +14611,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Show the name and score of those who passed except Lucy(s).</span>
@@ -14253,7 +14656,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df.final</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="n">df.col</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
@@ -14313,7 +14716,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span>
@@ -14358,7 +14761,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">new.students</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">names</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="s">&quot;Nom&quot;</span><span class="p">),</span>
@@ -14405,7 +14808,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df.new</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">new.students</span><span class="p">);</span> <span class="n">df.new</span>
@@ -14460,7 +14863,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Option 1</span>
@@ -14507,7 +14910,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Option 2</span>
@@ -14554,7 +14957,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Option 3</span>
@@ -14614,7 +15017,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># df stores student&#39;s EPIB 613 score</span>
@@ -14660,7 +15063,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># df.major stores student&#39;s program of study</span>
@@ -14710,11 +15113,11 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># See what does the argument &#39;all&#39; do.</span>
-<span class="n">df.full</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df.major</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&quot;student.no&quot;</span><span class="p">,</span> <span class="n">all</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+<span class="n">df.full</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df.major</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&quot;student.no&quot;</span><span class="p">,</span> <span class="n">all</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="n">df.full</span>
 </pre></div>
 
@@ -14734,16 +15137,18 @@ The following objects are masked from ‘package:base’:
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<caption>A data.frame: 4 × 5</caption>
+<caption>A data.frame: 6 × 5</caption>
 <thead>
 	<tr><th scope=col>student.no</th><th scope=col>names</th><th scope=col>score</th><th scope=col>pass</th><th scope=col>major</th></tr>
 	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>student 1</td><td>Lucy </td><td>67</td><td> TRUE</td><td>MSc PH </td></tr>
-	<tr><td>student 2</td><td>John </td><td>56</td><td>FALSE</td><td>PhD Epi</td></tr>
-	<tr><td>student 3</td><td>Mark </td><td>87</td><td> TRUE</td><td>MSc Epi</td></tr>
-	<tr><td>student 4</td><td>Candy</td><td>91</td><td> TRUE</td><td>MSc PH </td></tr>
+	<tr><td>student 1</td><td>Lucy </td><td>67</td><td> TRUE</td><td>MSc PH     </td></tr>
+	<tr><td>student 2</td><td>John </td><td>56</td><td>FALSE</td><td>PhD Epi    </td></tr>
+	<tr><td>student 3</td><td>Mark </td><td>87</td><td> TRUE</td><td>MSc Epi    </td></tr>
+	<tr><td>student 4</td><td>Candy</td><td>91</td><td> TRUE</td><td>MSc PH     </td></tr>
+	<tr><td>student 5</td><td>NA   </td><td>NA</td><td>   NA</td><td>PhD Biostat</td></tr>
+	<tr><td>student 6</td><td>NA   </td><td>NA</td><td>   NA</td><td>MSc Biostat</td></tr>
 </tbody>
 </table>
 
@@ -14771,7 +15176,7 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Some simple simulation</span>
@@ -14834,12 +15239,12 @@ The following objects are masked from ‘package:base’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Tabulate exposure and outcome</span>
 <span class="nf">table</span><span class="p">(</span><span class="n">sim[</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;drug&quot;</span><span class="p">,</span> <span class="s">&quot;cured&quot;</span><span class="p">)</span><span class="n">]</span><span class="p">)</span>
-<span class="c1"># ~20% among unexposed to the drug are cured</span>
+<span class="c1"># ~30% among unexposed to the drug are cured</span>
 <span class="c1"># 40% among exposed are cured</span>
 </pre></div>
 
@@ -14880,16 +15285,173 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">exposed.group</span> <span class="o">&lt;-</span> <span class="n">sim[sim</span><span class="o">$</span><span class="n">drug</span> <span class="o">==</span> <span class="m">1</span><span class="p">,</span> <span class="n">]</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">exposed.group</span><span class="p">)</span>
+<span class="nf">mean</span><span class="p">(</span><span class="n">exposed.group</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 6 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>drug</th><th scope=col>obesity</th><th scope=col>age</th><th scope=col>cured</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>1</td><td>1</td><td>53</td><td>1</td></tr>
+	<tr><th scope=row>2</th><td>1</td><td>1</td><td>44</td><td>1</td></tr>
+	<tr><th scope=row>4</th><td>1</td><td>0</td><td>41</td><td>1</td></tr>
+	<tr><th scope=row>6</th><td>1</td><td>1</td><td>54</td><td>1</td></tr>
+	<tr><th scope=row>8</th><td>1</td><td>1</td><td>53</td><td>0</td></tr>
+	<tr><th scope=row>21</th><td>1</td><td>0</td><td>69</td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+61.0333333333333
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">exposed.group1</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">subset</span> <span class="o">=</span> <span class="p">(</span><span class="n">drug</span> <span class="o">==</span> <span class="m">1</span><span class="p">))</span>
+<span class="nf">mean</span><span class="p">(</span><span class="n">exposed.group1</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+61.0333333333333
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="nf">subset</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">subset</span> <span class="o">=</span> <span class="p">(</span><span class="n">drug</span> <span class="o">==</span> <span class="m">1</span><span class="p">))</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+61.0333333333333
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="nf">subset</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">subset</span> <span class="o">=</span> <span class="p">(</span><span class="n">drug</span> <span class="o">==</span> <span class="m">1</span><span class="p">),</span> <span class="n">select</span> <span class="o">=</span> <span class="n">age</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="bp">T</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+61.0333333333333
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Survey">Survey<a class="anchor-link" href="#Survey">&#182;</a></h5><ul>
+<li>$ and [ , ]   2</li>
+<li>subset( )   7</li>
+<li><tt>dplyr</tt></li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14902,11 +15464,11 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Syntax 1</span>
-<span class="nf">aggregate</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">drug</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">drug</span><span class="p">),</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
+<span class="nf">aggregate</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">drug.justaname</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">drug</span><span class="p">),</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14927,7 +15489,7 @@ drug  0  1
 <table>
 <caption>A data.frame: 2 × 2</caption>
 <thead>
-	<tr><th scope=col>drug</th><th scope=col>x</th></tr>
+	<tr><th scope=col>drug.justaname</th><th scope=col>x</th></tr>
 	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
@@ -14946,7 +15508,7 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Alternative syntax</span>
@@ -14991,7 +15553,7 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Mean age by exposure-obesity group, so 2 binary conditions and 4 subgroups</span>
@@ -15037,7 +15599,7 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">aggregate</span><span class="p">(</span><span class="n">age</span><span class="o">~</span><span class="n">drug</span><span class="o">+</span><span class="n">obesity</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
@@ -15082,11 +15644,12 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># aggregate() can also take multiple target variables</span>
-<span class="nf">aggregate</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">sim</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">sim</span><span class="o">$</span><span class="n">cured</span><span class="p">),</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">drug</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">drug</span><span class="p">,</span> <span class="n">obesity</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">obesity</span><span class="p">),</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
+<span class="nf">aggregate</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">sim</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">sim</span><span class="o">$</span><span class="n">cured</span><span class="p">),</span>
+          <span class="n">by</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">drug</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">drug</span><span class="p">,</span> <span class="n">obesity</span> <span class="o">=</span> <span class="n">sim</span><span class="o">$</span><span class="n">obesity</span><span class="p">),</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15128,7 +15691,7 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">aggregate</span><span class="p">(</span><span class="nf">cbind</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">cured</span><span class="p">)</span><span class="o">~</span><span class="n">drug</span><span class="o">+</span><span class="n">obesity</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
@@ -15180,7 +15743,7 @@ drug  0  1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">sim[</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;drug&quot;</span><span class="p">,</span> <span class="s">&quot;obesity&quot;</span><span class="p">,</span> <span class="s">&quot;cured&quot;</span><span class="p">)</span><span class="n">]</span><span class="p">)</span>
@@ -15216,6 +15779,148 @@ drug  0  1
    0 14  9
    1  5  7
 </pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">aggregate</span><span class="p">(</span><span class="n">age</span><span class="o">~</span><span class="n">drug</span><span class="o">+</span><span class="n">obesity</span><span class="o">+</span><span class="n">cured</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">length</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 8 × 4</caption>
+<thead>
+	<tr><th scope=col>drug</th><th scope=col>obesity</th><th scope=col>cured</th><th scope=col>age</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>0</td><td>0</td><td>0</td><td>26</td></tr>
+	<tr><td>1</td><td>0</td><td>0</td><td>10</td></tr>
+	<tr><td>0</td><td>1</td><td>0</td><td>21</td></tr>
+	<tr><td>1</td><td>1</td><td>0</td><td> 8</td></tr>
+	<tr><td>0</td><td>0</td><td>1</td><td>14</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td><td> 5</td></tr>
+	<tr><td>0</td><td>1</td><td>1</td><td> 9</td></tr>
+	<tr><td>1</td><td>1</td><td>1</td><td> 7</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># What aggregate does? Use print() to print out what R aggregates.</span>
+<span class="nf">aggregate</span><span class="p">(</span><span class="n">age</span><span class="o">~</span><span class="n">drug</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sim</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">print</span><span class="p">)</span>
+<span class="c1"># aggregate the target variables in to vectors, based on conditions.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> [1] 61 49 51 70 54 64 59 73 63 45 65 49 63 68 58 62 49 70 82 59 47 41 64 49 67
+[26] 65 71 39 57 53 55 54 62 50 44 49 59 55 58 60 56 47 74 51 76 58 46 63 59 69
+[51] 69 59 66 59 63 54 75 80 75 62 59 74 51 74 69 52 52 51 58 57
+ [1] 53 44 41 54 53 69 81 62 55 77 49 71 76 82 66 68 51 71 54 55 66 65 52 62 70
+[26] 47 59 57 50 71
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>drug</th><th scope=col>age</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;list&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>0</td><td>61, 49, 51, 70, 54, 64, 59, 73, 63, 45, 65, 49, 63, 68, 58, 62, 49, 70, 82, 59, 47, 41, 64, 49, 67, 65, 71, 39, 57, 53, 55, 54, 62, 50, 44, 49, 59, 55, 58, 60, 56, 47, 74, 51, 76, 58, 46, 63, 59, 69, 69, 59, 66, 59, 63, 54, 75, 80, 75, 62, 59, 74, 51, 74, 69, 52, 52, 51, 58, 57</td></tr>
+	<tr><td>1</td><td>53, 44, 41, 54, 53, 69, 81, 62, 55, 77, 49, 71, 76, 82, 66, 68, 51, 71, 54, 55, 66, 65, 52, 62, 70, 47, 59, 57, 50, 71</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># length() function gives the length of a vector</span>
+<span class="nf">length</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">123</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+3
 </div>
 
 </div>

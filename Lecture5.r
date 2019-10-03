@@ -37,8 +37,12 @@ df[1, , drop = TRUE]
 # Delete variable "names" + reorder columns
 df[ , c("student.no", "score", "pass")]
 
+df$pass == TRUE
+
 # Select rows that passed
 df[df$pass == TRUE, ]
+
+df[df$names == "Lucy", ]
 
 # Delete variable
 df[ , -c(1, 2)]   # Delete the 1st and 2nd
@@ -50,6 +54,9 @@ df[ , -c(1, 2)]   # Delete the 1st and 2nd
 drop <- c("names", "score")
 df[ , !names(df) %in% drop]
 
+names(df)
+!names(df) %in% drop
+
 select = c("student.no", "pass")
 df[ , names(df) %in% select]
 
@@ -58,7 +65,20 @@ df[ , names(df) %in% select]
 "b" %in% c("a", "c", "e")
 1:10 %in% c(1, 3, 5)
 
+df[df$pass == TRUE & df$name != "Lucy" , c("names", "score")]
 
+passed <- df$pass == TRUE
+passed
+
+notLucy <- df$name != "Lucy"
+notLucy
+
+rowCondition <- passed & notLucy
+rowCondition
+
+df[rowCondition, ]
+
+df
 
 # "select" argument selects columns
 subset(df, select = c(student.no, pass))
@@ -76,6 +96,7 @@ subset(df, select = names, subset = (pass == TRUE))
 
 # Show the name and score of those who passed except Lucy(s).
 # Recall logical operators &, | and !
+subset(df, select = c(names, score), subset = pass == TRUE & names != "Lucy")
 
 library(dplyr)
 
@@ -117,7 +138,7 @@ df.major <- data.frame(student.no = c("student 1", "student 2", "student 3", "st
 df.major
 
 # See what does the argument 'all' do.
-df.full <- merge(df, df.major, by = "student.no", all = F)
+df.full <- merge(df, df.major, by = "student.no", all = TRUE)
 df.full
 
 # Some simple simulation
@@ -136,13 +157,22 @@ head(sim, 10)
 
 # Tabulate exposure and outcome
 table(sim[, c("drug", "cured")])
-# ~20% among unexposed to the drug are cured
+# ~30% among unexposed to the drug are cured
 # 40% among exposed are cured
 
+exposed.group <- sim[sim$drug == 1, ]
+head(exposed.group)
+mean(exposed.group$age)
 
+exposed.group1 <- subset(x = sim, subset = (drug == 1))
+mean(exposed.group1$age)
+
+mean(subset(x = sim, subset = (drug == 1))$age)
+
+mean(subset(x = sim, subset = (drug == 1), select = age, drop = T))
 
 # Syntax 1
-aggregate(x = sim$age, by = list(drug = sim$drug), FUN = mean)
+aggregate(x = sim$age, by = list(drug.justaname = sim$drug), FUN = mean)
 
 # Alternative syntax
 # I highly recommend this one
@@ -154,10 +184,20 @@ aggregate(x = sim$age, by = list(drug = sim$drug, obesity = sim$obesity), FUN = 
 aggregate(age~drug+obesity, data = sim, FUN = mean)
 
 # aggregate() can also take multiple target variables
-aggregate(x = cbind(sim$age, sim$cured), by = list(drug = sim$drug, obesity = sim$obesity), FUN = mean)
+aggregate(x = cbind(sim$age, sim$cured),
+          by = list(drug = sim$drug, obesity = sim$obesity), FUN = mean)
 
 aggregate(cbind(age, cured)~drug+obesity, data = sim, FUN = mean)
 
 table(sim[, c("drug", "obesity", "cured")])
+
+aggregate(age~drug+obesity+cured, data = sim, FUN = length)
+
+# What aggregate does? Use print() to print out what R aggregates.
+aggregate(age~drug, data = sim, FUN = print)
+# aggregate the target variables in to vectors, based on conditions.
+
+# length() function gives the length of a vector
+length(c(1,4,123))
 
 
