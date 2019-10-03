@@ -15,3 +15,5 @@ Fall 2019
   - [PDF](Lecture3.pdf), [HTML](Lecture3.ipynb), [Code](Lecture3.r)
 - Lecture 4
   - [PDF](Lecture4.pdf), [HTML](Lecture4.ipynb), [Code](Lecture4.r)
+  - Lecture 5
+  - [PDF](Lecture5.pdf), [HTML](Lecture5.ipynb), [Code](Lecture5.r)
