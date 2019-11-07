@@ -25,3 +25,5 @@ Fall 2019
   - [PDF](Lecture_8_Descriptives_categorical_2017.pdf)
 - Lecture 9
   - [PDF](Lecture9.pdf), [HTML](Lecture9.ipynb), [Code](Lecture9.r)
+- Lecture 10
+  - [PDF](Lecture10.pdf), [HTML](Lecture10.ipynb), [Code](Lecture10.r)
